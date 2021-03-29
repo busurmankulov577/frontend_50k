@@ -1,0 +1,58 @@
+/* Обращение бывают следующих типов::
+    1)теги
+    2)класс
+    3)id
+    4)атрибуты 
+*/
+
+
+
+.main_menu {
+    background-color: brown;
+    
+}
+.left-side{
+    background-color: blue;
+    color: black;
+}
+.right-side{
+    background-color: blue;
+    color: white;
+
+}
+.basement-of-site{
+    background-color: black;
+    color: white;
+}
+
+
+.second_class {
+    border: 10px outset green;
+}
+/* .left-side.second_class.sun.help{ */
+    /* background: yellow; */
+/* } */
+/* Данная запись трактуется след образом
+main_menu основной родит блок
+sun внутренний элемент который нах в main_menu
+
+    По простому::
+    CSS должен найти в HTML Класс sun который находится внутри main_menu
+*/
+.main_menu .sun{
+    background: pink;
+
+}
+.primer div {
+    background: red;
+}
+.primer p {
+    background: red;
+}
+#my_id{
+    background: yellow;
+}
+
+[data-damir="name"]{
+    background: pink;
+}

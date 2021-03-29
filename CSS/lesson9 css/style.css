@@ -1,0 +1,37 @@
+.top-menu{
+    border: 7px solid red;
+    background-color: rgb(45, 46, 46);
+    margin: 10px 15px 22px 18px;
+    padding: 10px 15px 22px 18px;
+}
+
+.left-side{
+    border: 6px double green;
+    background-color: rgb(245, 234, 215);
+    margin: 10px 15px 22px 18px;
+    padding: 15px;
+}
+.right-side{
+    border: 5px double green;
+    background-color: rgb(195, 135, 15);
+    margin: 10px 15px 22px 18px;
+    padding: 25px;
+
+}
+.container-of-site{
+    border: 7px inset red;
+    background-color: coral;
+    margin: 10px 15px 22px 18px;
+    padding: 10px 15px 22px 18px;
+
+    
+
+}
+.basement-of-site{
+    border: 7px outset red;
+    background-color: rgb(160, 52, 124);
+    margin: 10px 15px 22px 18px;
+    padding: 10px 15px 22px 18px;
+
+
+}

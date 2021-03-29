@@ -1,0 +1,29 @@
+/* Обращение бывают следующих типов::
+    1)теги
+    2)класс
+    3)id
+    4)атрибуты 
+*/
+
+
+
+.top-menu {
+    background-color: brown;
+    
+}
+.left-side{
+    background-color: blue;
+    color: white;
+}
+.right-side{
+    background-color: blue;
+    color: white;
+}
+.container-of-site {
+    background-color: blue;
+    color: white;
+}
+.basement-of-site{
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,97 @@
+/* 
+
+Базовые настройки страницы
+
+
+     * - ознaчает обращение ко всем элементам сайта
+
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+}
+
+
+/* Конец базовой настройки  */
+
+/*  Универсальные стили */
+
+            /* , - запятая это  означает дополнительное обращение к тому или иному элементу.
+            Это перечисление подключенных новых Class'ов 
+    */
+    .left, .ul_li li{
+        float: left;
+        /* FLoat - это обтекание . То есть выранивание .
+        Выравнивание :float куда ?
+        Выравнивание : в левую сторону left
+        Выравнивание : в правую сторону right 
+        */
+    }
+    .right{
+        float: right;
+    }
+
+    .ul_li {
+        list-style: none;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+    .ul_li li{
+        padding: 10px 15px;
+    }
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+
+        /* Margin - это внешний отступ 
+                Так же это выравнивание      
+                margin :0 auto; - ноль отступов со всех сторон и это значит выровнять по центру        
+        */
+    }
+
+
+/* Конец Универсальных стилей */
+
+
+
+
+/* Стили для страницы */
+
+
+        /* Урок 14 */
+
+        .verhnee_menu{
+            background: #f7f7f7;
+            display: inline-block;
+            width: 100%;
+        }
+        
+
+  
+
+
+/*Конец  Стилей для страницы */
+
+/* Следующий нижний второй блок  */
+
+.second_block{
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.second_block ul li {
+    padding-left: 30px;
+    padding-right: 0px;
+    margin-left: -15px;
+    margin-right: 105px;
+}
+
+/* Конец второго блока   */
