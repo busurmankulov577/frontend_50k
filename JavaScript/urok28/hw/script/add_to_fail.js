@@ -22,3 +22,5 @@
         // Без команды вывода ничего не выведится ;
 
 
+        let product = document.getElementsByClassName("product"); 
+        console.log(product[0].innerText);
