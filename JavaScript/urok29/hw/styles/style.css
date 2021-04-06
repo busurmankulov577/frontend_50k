@@ -99,17 +99,80 @@ body, p{
         position: absolute;
         background: white;
         border: 1px solid rgb(224, 224, 224);
-        width: 80%;
-        top: 43px;
-        left: 135px;
-        right: 650px;
+        width: 50%;
+        top: 50px;
+        left: 319px;
         z-index: 2;
         
     }
+    .dropdown_menu2{
+        display: none;
+        position: absolute;
+        background: white;
+        border: 1px solid rgb(224, 224, 224);
+        width: 12%;
+        top: 50px;
+        left: 319px;
+        z-index: 2;
+        
+    }
+    
+    .hover_menu li:hover .dropdown_menu2{
+        display: block;
+    }
+    .dropdown_menu3{
+        display: none;
+        position: absolute;
+        background: white;
+        border: 1px solid rgb(224, 224, 224);
+        width: 12%;
+        top: 50px;
+        left: 606px;
+        z-index: 2;
+        
+    }
+    .hover_menu li:hover .dropdown_menu3{
+        display: block;
+        
+    }
+    .dropdown_menu4{
+        display: none;
+        position: absolute;
+        background: white;
+        border: 1px solid rgb(224, 224, 224);
+        width: 14%;
+        top: 50px;
+        left: 795px;
+        z-index: 2;
+        
+    }
+    .hover_menu li:hover .dropdown_menu4{
+        display: block;
+        
+    }
+    .dropdown_menu5{
+        display: none;
+        position: absolute;
+        background: white;
+        border: 1px solid rgb(224, 224, 224);
+        width: 57%;
+        top: 50px;
+        left: 320px;
+        z-index: 2;
+        
+    }
+    .hover_menu li:hover .dropdown_menu5{
+        display: block;
+        
+    }
+
+
     .foto_flex{
         display: flex;
         justify-content: space-evenly;
         text-align: center;
+        margin-top: 15px;
+        margin-bottom: 20px;
         color:#ababad ;
         cursor: pointer;
         
