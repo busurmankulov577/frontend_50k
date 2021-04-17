@@ -232,23 +232,89 @@
 
 
 //Сделайте функцию которая возводить в степень числа вводимые пользователем
-function stepen(a){
-	let result = a * a;
-	console.log(result);
-}
-stepen(5);
+// function stepen(a){
+// 	let result = a * a;
+// 	console.log(result);
+// }
+// stepen(5);
 
-//Сделайте функцию которая находит площадь круга, радиус вводить пользователь 
-function ploshad(r){
-	let res = 3.1415 * (r*r);
-	console.log(res);
-}
-ploshad(5);
+// //Сделайте функцию которая находит площадь круга, радиус вводить пользователь 
+// function ploshad(r){
+// 	let res = 3.1415 * (r*r);
+// 	console.log(res);
+// }
+// ploshad(5);
 
 
-// Сделайте функцию которая находит площадь прямоугольника, длину и ширину вводить пользователь. 
-function square(a, b){
-	let result = a * b ;
-	console.log(result);
-}
-square(5, 2)
+// // Сделайте функцию которая находит площадь прямоугольника, длину и ширину вводить пользователь. 
+// function square(a, b){
+// 	let result = a * b ;
+// 	console.log(result);
+// }
+// square(5, 2);
+
+
+// методы и свойства 32 строк
+
+let text = "         Hello How are you? ";
+console.log(text.trim());
+
+// методы и свойства чисел 
+
+let number = 120;
+number.toString();
+
+
+let x = 9.655888;
+console.log(x.toExponential(1));
+
+let w = 9.655888;
+console.log(w.toFixed(2));
+
+// пример: если пользователь  ввел 1.2, 1.2 вывод должен быть 2. 
+		function mySumm(num1, num2){
+			
+			let res = num1 + num2;
+			console.log(Math.floor(res));
+
+		}
+	
+		mySumm(1.2, 1.2);
+
+		// пример: если пользователь  ввел 2.5, 2.3 вывод должен быть 5
+		
+		function mySumm2(num1, num2){
+			
+			let res = num1 + num2;
+			console.log(Math.ceil(res));
+
+		}
+		mySumm2(2.5, 2.3);
+
+
+// пример: если пользователь  ввел 2,5, 2.7 вывод должен быть 5. 
+
+
+		function mySumm3(num1, num2){
+			
+			let res = num1 + num2;
+			console.log(Math.floor(res));
+
+		}
+		mySumm3(2.5, 3.2);
+
+
+		// пример: если пользователь  ввел 2,5, 3,2 вывод должен быть 6.
+		
+		function mySumm4(num1, num2){
+			
+			let res = num1 + num2;
+			console.log(Math.ceil(res));
+
+		}
+		mySumm4(2.5, 3.2);
+
+
+
+
+
