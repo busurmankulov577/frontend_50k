@@ -249,16 +249,15 @@ body, p{
     .bag__img img{
         width: 75px;
         float: left;
-        margin-left: -65px;
+    
         /* overflow: hidden; */
     }
     
     .bag__info{
-   
-        margin-top: 10px;
+        width: 180px;
+        margin-top: 3px;
         margin-left: 20px;
-        text-align: justify;
-
+        text-align: left;
     }
     .info__title a{
         margin-bottom: 20px;
@@ -274,12 +273,16 @@ body, p{
         color: gray;
         margin-left: 5px;
     }
-    .trash{
+    /* .bag__item.trash{
         display: flex;
         justify-content: flex-end;
         margin-top: 8px;
         font-size: 13px;
-        margin-left: 15px;
+        margin-left: 15px; */
+    /* } */
+    .trash {
+        padding-top: 6px;
+        padding-left: 150px;
     }
 
     i.fas.fa-window-close {

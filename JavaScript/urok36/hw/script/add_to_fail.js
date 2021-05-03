@@ -120,14 +120,14 @@
 //по клику получить название товара с помощью js
 
 var elements = document.getElementsByClassName("add_cart");
-console.log(elements);
+// console.log(elements);
 
 var myFunction = function () {
 	var attribute = this.parentNode.parentNode.parentNode.querySelectorAll(".title");
 	alert(attribute[0].innerText);
 };
 
-for (var i = 0; i < elements.length; i++){
+for (var i = 0; i < elements.length; i++) {
 	elements[i].addEventListener('click', myFunction, false);
 }
 
@@ -140,7 +140,7 @@ var myPriceFunction = function () {
 	console.log(prattribute[0].innerText);
 };
 
-for (var i = 0; i < prelement.length; i++){
+for (var i = 0; i < prelement.length; i++) {
 	prelement[i].addEventListener('click', myPriceFunction, false);
 }
 
@@ -154,7 +154,7 @@ var myImgFunction = function () {
 	console.log(imgattribute[0].src);
 };
 
-for (var i = 0; i < imgelements.length; i++){
+for (var i = 0; i < imgelements.length; i++) {
 	imgelements[i].addEventListener('click', myImgFunction, false);
 }
 
@@ -330,32 +330,38 @@ var myFunction = function (evt) {
 	var price = this.parentNode.parentNode.parentNode.querySelectorAll(".price");
 	var image = this.parentNode.parentNode.parentNode.parentNode.querySelectorAll(".img img");
 	let creat_li = document.createElement('li');
+	creat_li.classList.add("bag__item");
 
 	console.log(title[0].innerText);
 	console.log(price[0].innerText);
 	console.log(image[0].src);
 
 	creat_li.innerHTML = '<div class="bag__img">\
-									<a href="?search=#">\
-										<img src="'+image[0].src+'" alt="">\
+									<a href="#">\
+										<img src="' + image[0].src + '" alt="">\
 									</a>\
 								</div>\
 								<div class="bag__info">\
-									<p class="info__title"> <a href="?search=#">'+title[0].innerText+'</a></p>\
+									<p class="info__title"> <a href="?search=#">' + title[0].innerText + '</a></p>\
 									<div class="info__price">\
-										<span>'+price[0].innerText+'</span>\
+										<span>' + price[0].innerText + '</span>\
+										<del></del>\
 									</div>\
 									<div class="trash">\
 										<a href="?search=#"><i class="far fa-trash-alt"></i></a>\
 									</div>\
 								</div>';
-	
-								
+
+
 
 
 	let block_cart = document.querySelector('#msg ul');
 	block_cart.appendChild(creat_li);
+
 	// alert("Товары успешно добавлены в корзину");
+
+	// Deleted product
+	delete_product();
 
 };
 
@@ -365,8 +371,6 @@ var myFunction = function (evt) {
 
 
 
-
-// 
 
 
 for (var i = 0; i < class_name.length; i++) {
@@ -384,8 +388,24 @@ function textMsg() {
 
 
 function closeMsg() {
-    document.getElementById('msg').style.display = 'none';
+	document.getElementById('msg').style.display = 'none';
 }
 
 
 
+function delete_product() {
+	let click_trash = document.querySelectorAll(".trash");
+
+	for (var i = 0; i < click_trash.length; i++) {
+		click_trash[i].addEventListener('click', fun_del, false);
+	}
+
+
+
+	function fun_del(evt) {
+		evt.preventDefault();
+		console.log(this.parentNode.parentNode.remove());
+
+	}
+
+}
