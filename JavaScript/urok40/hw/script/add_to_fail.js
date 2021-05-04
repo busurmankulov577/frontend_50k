@@ -321,22 +321,22 @@ console.log(elem);
 
 
 
-let class_name = document.getElementsByClassName("add_cart");
-console.log(class_name);
+let classname = document.getElementsByClassName("add_cart");
+console.log(classname);
 
 var myFunction = function (evt) {
 	evt.preventDefault();
 	var title = this.parentNode.parentNode.parentNode.querySelectorAll(".title");
 	var price = this.parentNode.parentNode.parentNode.querySelectorAll(".add_price");
 	var image = this.parentNode.parentNode.parentNode.parentNode.querySelectorAll(".img img");
-	let creat_li = document.createElement('li');
-	creat_li.classList.add("bag__item");
+	let creatli = document.createElement('li');
+	creatli.classList.add("bag__item");
 
 	// console.log(title[0].innerText);
 	// console.log(price[0].innerText);
 	// console.log(image[0].src);
 
-	creat_li.innerHTML = '<div class="bag__img">\
+	creatli.innerHTML = '<div class="bag__img">\
 									<a href="#">\
 										<img src="' + image[0].src + '" alt="">\
 									</a>\
@@ -355,14 +355,14 @@ var myFunction = function (evt) {
 
 
 
-	let block_cart = document.querySelector('#msg ul');
-	block_cart.appendChild(creat_li);
+	let blockcart = document.querySelector('#msg ul');
+	blockcart.appendChild(creatli);
 
 	alert("Товары успешно добавлены в корзину");
 
 	// Deleted product
 
-	delete_product();
+	deleteProduct();
 
 
 	// Total price , get total sum in cart 
@@ -378,8 +378,8 @@ var myFunction = function (evt) {
 
 
 
-for (var i = 0; i < class_name.length; i++) {
-	class_name[i].addEventListener('click', myFunction, false);
+for (var i = 0; i < classname.length; i++) {
+	classname[i].addEventListener('click', myFunction, false);
 }
 
 
@@ -398,43 +398,44 @@ function closeMsg() {
 
 
 // Delete product 
-function delete_product() {
-	let click_trash = document.querySelectorAll(".trash");
+function deleteProduct() {
+	let clicktrash = document.querySelectorAll(".trash");
 
-	for (var i = 0; i < click_trash.length; i++) {
-		click_trash[i].addEventListener('click', fun_del, false);
+	for (var i = 0; i < clicktrash.length; i++) {
+		clicktrash[i].addEventListener('click', fundel, false);
 	}
 
 
 
-	function fun_del(evt) {
+	function fundel(evt) {
 		evt.preventDefault();
-		console.log(this.parentNode.parentNode.remove());
+		this.parentNode.parentNode.remove();
 
 		
-		totalPrice()
+		totalPrice();
 	}
 
 }
 // Count price 
 
-function totalPrice() {
-	let count_price = document.querySelectorAll(".info__price .add_price");
-	console.log(count_price);
+	function totalPrice() {
+		let countprice = document.querySelectorAll(".info__price .add_price");
+		console.log(countprice);
 
-	let total_price = 0;
+		let totalprice = 0;
 
-	for (var i = 0; i < count_price.length; i++) {
-		total_price = total_price + (+count_price[i].textContent);
+		for (var i = 0; i < countprice.length; i++) {
+			totalprice = totalprice + (+countprice[i].textContent);
+		}
+
+
+		// console.log(total_price);
+
+		document.getElementsByClassName("total_cart")[0].innerHTML = `$ ${totalprice}`;
+
+		document.querySelectorAll(".shopcard_total span")[0].innerHTML = `$ ${totalprice}`;
+
+
+
 	}
-
-
-	console.log(total_price);
-
-	document.getElementsByClassName("total_cart")[0].innerHTML = `$ ${total_price}`;
-	document.querySelectorAll(".shopcard_total span")[0].innerHTML = `$ ${total_price}`;
-
-
-
-}
 
