@@ -328,7 +328,7 @@ var myFunction = function (evt) {
 	evt.preventDefault();
 	var title = this.parentNode.parentNode.parentNode.querySelectorAll(".title");
 	var price = this.parentNode.parentNode.parentNode.querySelectorAll(".add_price");
-	var image = this.parentNode.parentNode.parentNode.parentNode.querySelectorAll(".img img");
+	var image = this.parentNode.parentNode.parentNode.parentNode.querySelectorAll(".img img")
 	let creatli = document.createElement('li');
 	creatli.classList.add("bag__item");
 
@@ -351,6 +351,7 @@ var myFunction = function (evt) {
 										<a href="?search=#"><i class="far fa-trash-alt"></i></a>\
 									</div>\
 								</div>';
+	
 
 
 
@@ -411,31 +412,30 @@ function deleteProduct() {
 		evt.preventDefault();
 		this.parentNode.parentNode.remove();
 
-		
+
 		totalPrice();
 	}
 
 }
 // Count price 
 
-	function totalPrice() {
-		let countprice = document.querySelectorAll(".info__price .add_price");
-		console.log(countprice);
+function totalPrice() {
+	let countprice = document.querySelectorAll(".info__price .add_price");
+	console.log(countprice);
 
-		let totalprice = 0;
+	let totalprice = 0;
 
-		for (var i = 0; i < countprice.length; i++) {
-			totalprice = totalprice + (+countprice[i].textContent);
-		}
-
-
-		// console.log(total_price);
-
-		document.getElementsByClassName("total_cart")[0].innerHTML = `$ ${totalprice}`;
-
-		document.querySelectorAll(".shopcard_total span")[0].innerHTML = `$ ${totalprice}`;
-
-
-
+	for (var i = 0; i < countprice.length; i++) {
+		totalprice = totalprice + (+countprice[i].textContent);
 	}
 
+
+	// console.log(total_price);
+
+	document.getElementsByClassName("total_cart")[0].innerHTML = `$ ${totalprice}`;
+
+	document.querySelectorAll(".shopcard_total span")[0].innerHTML = `$ ${totalprice}`;
+
+
+
+}
