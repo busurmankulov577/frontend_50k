@@ -502,7 +502,7 @@ body, p{
                 
                 .product img {
                     width: 205px;
-                    height: 205px;
+                    height: 200px;
                     overflow: hidden;
                     object-fit: contain;
                 }
