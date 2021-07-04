@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Java Script </title>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- 
+    Абсолютные пути 
+
+    Чтобы войти в папку в ту или иную папку необходимо использовать / слеш 
+
+    Чтобы выйти из какой либо папки нужно использовать две точки .. 
+    
+    Выйти  и зайти бедт выглядить ../ 
+
+
+ -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css">
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+    <header>
+        <!-- Верхнее меню -->
+        <div class="verhnee_menu">
+            <div class="container">
+                <!-- Левая сторона -->
+                <div class="left">
+                    <ul class="ul_li b-r">
+                        <li><i class="fas fa-bullhorn"></i>SMS default welcome</li>
+                        <li>
+                            <span class="icon_msg">
+                                <i class="fas fa-gift"></i>
+                                <span class="msg">
+                                    2
+                                </span>
+                            </span>
+                            <span>Gift vounchers</span>
+
+
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Правая сторона -->
+                <div class="right">
+                    <ul class="ul_li b-r">
+                        <li>
+                            <i class="fas fa-globe"></i>
+                            <span>Language:</span>
+                            <select name="language" class="lang"
+                                style="background-color:#f7f7f7; color:#4c4b6c; border:none; font-weight: bolder;cursor: pointer;">
+                                <option value="eng">ENG</option>
+                                <option value="rus">RUS</option>
+                                <option value="kg">KGZ</option>
+                            </select>
+                        </li>
+                        <li>
+                            <i class="far fa-money-bill-alt"></i>
+                            <span>Currency:</span>
+                            <select name="currency" id="curs"
+                                style="background-color:#f7f7f7; color:#4c4b6c; border:none; font-weight: bolder; cursor: pointer;">
+                                <option value="usd">USD</option>
+                                <option value="euro">EURO</option>
+                                <option value="som">SOM</option>
+                            </select>
+                        </li>
+                        <li><i class="fas fa-sign-in-alt"></i>Sign id/Register</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Центральное меню  -->
+        <div class="container">
+            <div class="center_menu">
+                <ul class="ul_li b-r">
+                    <li>
+                        <img src="../img/muikidlogo.png" alt="miujidlogo">
+                    </li>
+                    <li>
+                        <div class="left">
+                            <span class="seryi_krug"><i class="far fa-calendar-alt"></i></span>
+                        </div>
+                        <div class="right m-l-10">
+                            <p>Mon - Sat 8h00 -18h00</p>
+                            <p>Sunday <span class="red">CLOSED</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <span class="seryi_krug"><i class="fas fa-bookmark"></i></span>
+                        </div>
+                        <div class="right m-l-10">
+                            <p>Every Week Sales!</p>
+                            <p>Discount<span class="coral"> up to 50% off. </span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left">
+                            <span class="seryi_krug"><i class="fas fa-phone-alt"></i></span>
+                        </div>
+                        <div class="right m-l-10">
+                            <p>Have a Questions?</p>
+                            <p>Call:<span class="blue">1900 - 819898.</span></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Нижнее меню  -->
+        <div class="nijnee_menu">
+
+            <div class="container">
+
+                <div class="left">
+                    <ul class="hover_menu ul_li">
+                        <li class="posit">
+                            <a href="" class="bg-sr">Home</a>
+                            <div class="dropdown_menu1">
+                                <ul class="f_li_hover2 blogs">
+                                    <h5>Home Pages</h5>
+                                    <li>Home Pages 1</li>
+                                    <li>Home Pages 2</li>
+                                    <li>Home Pages 3</li>    
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="posit">
+                            <a href="" class="bg-sr">Products</a>
+                            <div class="dropdown_menu2 ">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col order-first">
+                                            <h3 class="f_title ms-4">Shop Pages</h3>
+                                            <ul class="f_li_hover2 ms-4 mb-4">
+                                                <li>Shop Pages 1 </li>
+                                                <li>Shop Pages 2 </li>
+                                                <li>Shop Pages 3 </li>
+                                                <li>Shop Pages 4 </li>
+                                                <li>Shop Pages 5 </li>
+                                                <li>Shop Pages 6 </li>
+                                                <li>Shop Pages 7 </li>
+                                                <li>Shop Pages 8 </li>
+                                                <li>Shop Pages 9 </li>
+                                                <li>Shop Pages 10 </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <h3 class="f_title">Products</h3>
+                                            <ul class="f_li_hover2">
+                                                <li>Product 1</li>
+                                                <li>Product 2</li>
+                                                <li>Product 3</li>
+                                                <li>Product 4</li>
+                                                <li>Product 5</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col order-last">
+                                            <h3 class="f_title">Other Pages</h3>
+                                            <ul class="f_li_hover2">
+                                                <li>Contact Us</li>
+                                                <li>Quick View</li>
+                                                <li>Popup Newsletter</li>
+                                            </ul>
+                                        </div>
+                                        <!-- <p>
+                                            <img src="../img/girl.PNG" alt="">
+                                        </p> -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+
+
+                        <li class="posit">
+                            <a href="" class="bg-sr">Sale</a>
+                            <div class="dropdown_menu3">
+                                <div class="foto_flex">
+                                    <figure>
+                                        <img src="../img/nijnee_menu/img86.jpg" alt="img87">
+                                        <figcaption> New tranding </figcaption>
+                                    </figure>
+                                    <figure>
+                                        <img src="../img/nijnee_menu/img87.jpg" alt="img86">
+                                        <figcaption>New Lookbooks</figcaption>
+                                    </figure>
+                                    <figure>
+                                        <img src="../img/nijnee_menu/img86.jpg" alt="img87">
+                                        <figcaption>Onsale</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="posit">
+                            <a href="" class="bg-sr">Blogs</a>
+                            <div class="dropdown_menu4">
+                                <ul class="f_li_hover2 blogs">
+                                    <li>
+                                        <h2>Blogs</h2>
+                                    </li>
+                                    <li>Blog Grid 1</li>
+                                    <li>Blog Grid 2</li>
+                                    <li>Blog Grid 3</li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="posit">
+                            <a href="" class="bg-sr">About Us</a>
+                            <div class="dropdown_menu5">
+                                <ul class="f_li_hover2 blogs">
+                                    <li>
+                                        <h4>About Us</h4>
+                                    </li>
+                                    <li>About Us 1</li>
+                                    <li>About Us 2</li>
+                                    <li>About Us 3</li>
+                                    <li>About Us 4</li>
+                                    <li>About Us 5</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="right">
+                    <ul class="hover_menu ul_li">
+                        <li>
+                            <form action="?search=#" name="search" method="GET" class="search_box">
+                                <input type="text" class="search_txt" placeholder="Search...">
+                                <button type="submit" class="search_btn "><i class="fas fa-search"></i></button>
+                            </form>
+                        </li>
+                        <li class="posit">
+                            <div class="left">
+
+                                <a href="#" onclick="textMsg()">
+                                    <span class="yellow_krug btn_active"><i class="fas fa-briefcase"></i></span>
+                                </a>
+
+                                <div id="msg">
+                                    <ul class="ul_list">
+                                    </ul>
+                                    <div class="shopcard_total">
+                                        <p>Total</p>
+                                        <span>$ 0</span>
+                                    </div>
+                                    <p>
+                                        <button class="btn_call2">CHECK OUT</button>
+                                    </p>
+                                    <div id="close"><a href="javascript:closeMsg()"><i
+                                                class="fas fa-window-close"></i></a></div>
+
+                                </div>
+                            </div>
+                            <div class="right m-l-10">
+                                <p id="mycart">My Cart.</p>
+                                <p>
+                                    <span class="cart_cout">0</span>
+                                    /
+                                    <span class="total_cart">$0</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            
+            <p>
+                <input type="text" id="som" placeholder="Coм">
+            </p>
+            <p>
+                <input type="text" id="usd" placeholder="USD">
+            </p>
+            
+            <button type="button" class=" right btn btn-success" onclick="changeStyle()">Success</button>
+
+
+            <section id="product">
+
+
+                <div class="block_title">
+
+                    <div class="left ">
+
+                        <h1 class="insert__listing">Featured</h1>
+
+                    </div>
+                    <div class="main__haiding">
+
+                    </div>
+
+                    <div class="right">
+                        <span> View All Products <i class="fas fa-arrow-alt-circle-left"></i></span>
+                    </div>
+                </div>
+
+                <div class="body_block">
+
+                    <div class="list_product">
+
+
+
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="banner" class="mt-5">
+
+                <div class="row">
+
+                    <div class="col-md-8 pe-2">
+                        <img src="../img/banner/banner.png" alt="banner.png">
+                    </div>
+
+                    <div class="col-md-4">
+                        <img src="../img/banner/banner2.png" alt="banner2.png">
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <p>
+                        <img src="../img/muikidlogo.png" alt="muikidlogo">
+                    </p>
+                    <p class="mt-3">
+                        <em>Miukid is a premium eCommerce theme with advanced admin module.</em>
+                    </p>
+                    <ul class="mt-4 ms-3 ">
+                        <li>
+                            <span><i class="fas fa-phone-volume"></i></span>
+                            <span>Telephone:</span>
+                            <a href="tel:+84988992085">+84 988 992 085 </a>
+                        </li>
+                        <li>
+                            <span><i class="fas fa-envelope"></i></span>
+                            <span>Email:</span>
+                            <a href="mailto:dbusur111@gmail.com">dbusur111@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="far fa-clock"></i>
+                            <span>8:00 - 19:00, Monday - Saturday,Sunday - closed</span>
+                        </li>
+                    </ul>
+                    <p class="btn_call">
+                        <a href="tel:+996505006666">Связаться со мной</a>
+                    </p>
+                </div>
+                <div class="col-sm-2">
+
+                    <h3 class="f_title">Information</h3>
+                    <ul class="f_li_hover">
+                        <li>About Us</li>
+                        <li> Shipping & Returns</li>
+                        <li> Privacy Notice</li>
+                        <li> Conditions of Use</li>
+                        <li> RSS</li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h3 class="f_title">Service</h3>
+                    <ul class="f_li_hover">
+                        <li>Online support</li>
+                        <li> Help & FAQs</li>
+                        <li> Call Center</li>
+                        <li> Contact Us</li>
+                        <li> Custom Link</li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h3 class="f_title">Instagram</h3>
+                    <ul class="ul_li">
+                        <li>
+                            <img src="../img/instagram/img18.jpg" alt="img18">
+                        </li>
+                        <li>
+                            <img src="../img/instagram/img19.jpg" alt="img19">
+                        </li>
+                        <li>
+                            <img src="../img/instagram/img20.jpg" alt="img20">
+                        </li>
+                        <li>
+                            <img src="../img/instagram/img21.jpg" alt="img21">
+                        </li>
+                        <li>
+                            <img src="../img/instagram/img22.jpg" alt="img22">
+                        </li>
+                        <li>
+                            <img src="../img/instagram/img23.jpg" alt="img23">
+                        </li>
+                        <li>
+                            <img src="../img/instagram/img24.jpg" alt="img24">
+                        </li>
+                        <li>
+                            <img src="../img/instagram/img25.jpg" alt="img25">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container ">
+            <div class="between">
+                <div class="left">
+                    <ul class="ul_li">
+                        <li><i class="fab fa-twitter"></i></li>
+                        <li><i class="fab fa-skype"></i></li>
+                        <li><i class="fab fa-vine"></i></li>
+                        <li><i class="fab fa-facebook-f"></i></li>
+                    </ul>
+                </div>
+
+                <div class="right">
+                    <ul class="ul_li gray">
+                        <li>
+                            <span>Home</span>
+                        </li>
+                        <li>
+                            <span>New Arrivals</span>
+                        </li>
+                        <li>
+                            <span>Site map</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="bottom_block">
+
+                <div class="left">
+                    <p class="gray">Copyright © 2021 byEngoTheme. All Rights Reserved.</p>
+                </div>
+                <div class="right">
+                    <ul class="ul_li">
+                        <li>
+                            <img src="../img/pay/icon1.png" alt="icon1">
+                        </li>
+                        <li>
+                            <img src="../img/pay/icon2.png" alt="icon2">
+                        </li>
+                        <li>
+                            <img src="../img/pay/icon3.png" alt="icon3">
+                        </li>
+                        <li>
+                            <img src="../img/pay/icon4.png" alt="icon4">
+                        </li>
+                        <li>
+                            <img src="../img/pay/icon5.png" alt="icon5">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+    </footer>
+    <script src="styles/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./script/add_to_fail.js"></script>
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
