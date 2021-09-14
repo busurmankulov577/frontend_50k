@@ -402,23 +402,23 @@
         
     // });
 
-    const test = time => {
-        return new Promise(resolve =>{
-            setTimeout(() => resolve(), time);
+    // const test = time => {
+    //     return new Promise(resolve =>{
+    //         setTimeout(() => resolve(), time);
 
               
-        });
+    //     });
 
-    };
-    test(1000).then(() => console.log("Time 1000"));
-    test(2000).then(() => console.log("Time 2000"));
+    // };
+    // test(1000).then(() => console.log("Time 1000"));
+    // test(2000).then(() => console.log("Time 2000"));
 
-    Promise.all([test(1000),test(2000)]).then(() => {
-        console.log("ALL done")
-    });
-    Promise.race([test(1000),test(2000)]).then(() => {
-        console.log("ALL done");
-    });
+    // Promise.all([test(1000),test(2000)]).then(() => {
+    //     console.log("ALL done")
+    // });
+    // Promise.race([test(1000),test(2000)]).then(() => {
+    //     console.log("ALL done");
+    // });
 
 
     // filter
@@ -460,6 +460,14 @@
 
     // console.log(result);
 
+
+ 
+
+
+
+
+
+   
 
 
 
