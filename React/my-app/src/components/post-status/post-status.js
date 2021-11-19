@@ -1,13 +1,15 @@
-import React from 'react';
+// import React from 'react';
 
-const PostStatusFilter = () => {
-    return(
-        <div className="btn-group">
-            <button value="Btn1"/>
-            <button value="Btn2"/>
-        </div>
+// const PostStatusFilter = () => {
+//     return(
+//         <div>
+//             <div class="btn-group">
+//                 <a href="#" class="btn btn-primary active" aria-current="page">Все</a>
+//                 <a href="#" class="btn btn-outline-success">Понравившиеся</a>
+//             </div>
+//         </div>
 
-    )
-}
+//     )
+// }
 
-export default PostStatusFilter;
+// export default PostStatusFilter;

@@ -1,12 +1,23 @@
 import React from 'react';
-
+import './search-panel'
 const SearchPanel = () => {
     return(
-        <input 
-            type="text"   
-            className="form-control search-input"
-            placeholder="Поиск записей"
-        />
+
+        <div className="container">
+                <form className="bottom-panel d-flex mb-5">
+                    <input 
+                        type="text"   
+                        className="d-flex  form-control search-input me-1"
+                        placeholder="Поиск записей"
+                    />
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-primary active" aria-current="page">Все</a>
+                        <a href="#" class="btn btn-outline-success">Понравившиеся</a>
+                    </div>
+        
+                </form>
+        </div>
+        
 
     )
 }
