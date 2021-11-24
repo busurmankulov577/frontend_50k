@@ -1,5 +1,7 @@
 import React from 'react';
 import PostListItem from '../post-list-item';
+import "./post-list.scss";
+import style from "./post-list.module.css";
 
 const PostList = ({posts}) => {
     const elem = posts.map((item) => {
@@ -7,7 +9,7 @@ const PostList = ({posts}) => {
         const {id, ...itemProps} = item;
 
         return (
-            <li key={id}>
+            <li key={id} className={style.bg}>
                 
                 <PostListItem {...itemProps}/>
             </li>
@@ -18,7 +20,7 @@ const PostList = ({posts}) => {
 
 
     return(
-        <ul className="app-list list-group">
+        <ul className="app-list list-group-item">
             {elem}
         </ul>
 
