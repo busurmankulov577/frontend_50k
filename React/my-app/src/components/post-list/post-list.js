@@ -3,7 +3,7 @@ import PostListItem from '../post-list-item';
 import "./post-list.scss";
 import style from "./post-list.module.css";
 
-const PostList = ({posts}) => {
+const PostList = ({posts, onDelete}) => {
     const elem = posts.map((item) => {
 
         const {id, ...itemProps} = item;
@@ -11,7 +11,10 @@ const PostList = ({posts}) => {
         return (
             <li key={id} className={style.bg}>
                 
-                <PostListItem {...itemProps}/>
+                <PostListItem {...itemProps}
+                onDelete={()=> onDelete(id)}
+                />
+                
             </li>
 
 

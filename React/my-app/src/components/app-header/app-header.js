@@ -24,10 +24,10 @@ const AppDiv = styled.div`
 
 `;
 
-const AppDiv2 = styled(AppDiv)`
-    color:red;
+// const AppDiv2 = styled(AppDiv)`
+//     color:red;
 
-`;
+// `;
 
 const AppHeader = () => {
     return(
@@ -37,11 +37,7 @@ const AppHeader = () => {
                 <h1>Дамирбек Бусурманкулов</h1>
                 <span>
                     <span> 3 </span>- Записи, из них 0 - понравилось
-                </span>
-                <AppDiv2 as="a">
-                    Isntagram
-                    
-                </AppDiv2>                
+                </span>            
             </AppDiv>
 
 
