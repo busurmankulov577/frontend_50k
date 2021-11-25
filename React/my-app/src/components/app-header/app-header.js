@@ -11,7 +11,7 @@ const AppDiv = styled.div`
 
 
     h1 {
-        font-size:30px;
+        font-size:26px;
         cursor:pointer;
         :hover {
             color:blue;
@@ -36,7 +36,7 @@ const AppHeader = ({allPost, likes}) => {
 
                 <h1>Дамирбек Бусурманкулов</h1>
                 <span>
-                    <span> {allPost} </span>- записи, из них {likes} - понравилось
+                    {allPost} - записи, из них {likes} - понравилось 
                 </span>            
             </AppDiv>
 

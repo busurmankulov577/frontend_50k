@@ -8,6 +8,18 @@ export default class SearchPanel extends Component {
         this.state= {
             text: ''
         }
+
+
+        this.button = [
+            {
+                name: "all",label: "Все"
+            },
+            {
+                name: "like",label: "Понравившиеся"
+            }
+
+        ]
+
         this.onSearchPost = this.onSearchPost.bind(this);
     }
 
@@ -26,6 +38,17 @@ export default class SearchPanel extends Component {
     }
 
     render(){
+        const btns = this.button.map(({name,label}) => {
+            const {filter , onUpdateFilter} = this.props
+
+            const active = filter === name;
+            const activeClass = active ? 'btn-all btn-info' : 'btn-outline-secondary' 
+            return (
+                <button key={name} className={`btn ${activeClass}`} onClick={() => onUpdateFilter(name)}>{label}</button>
+            )
+        })
+
+
         return(
 
             <div className="container">
@@ -39,8 +62,7 @@ export default class SearchPanel extends Component {
                         />
                         <div class="btn-group">
                    
-                            <a href="#" class="btn btn-primary active" aria-current="page">Все</a>
-                            <a href="#" class="btn btn-outline-success">Понравившиеся</a>
+                            {btns}
                         </div>
             
                     </form>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import AppHeader from '../app-header';
 import SearchPanel from '../search-panel';
-// import PostStatusFilter from '../post-status';
 import PostList from '../post-list';
 import PostAddForm from '../post-add-form';
 
@@ -17,13 +16,15 @@ export default class App extends Component {
                 {label: "Статья номер 3", important: false, like: false , id:3},
 
             ],
-            searchValue: ""
+            searchValue: "",
+            filter: "all"
         }
         this.onDelete = this.onDelete.bind(this);
         this.addItem = this.addItem.bind(this);
         this.onToggleImportant = this.onToggleImportant.bind(this);
         this.onToggleLike = this.onToggleLike.bind(this);
         this.onUpdateSearchPanel = this.onUpdateSearchPanel.bind(this);
+        this.onUpdateFilter = this.onUpdateFilter.bind(this);
 
         this.id = 4;
     }
@@ -107,14 +108,28 @@ export default class App extends Component {
         })
     }
 
+    filterPost(items, filter){
+        if (filter === "like"){
+
+            return items.filter(item => item.like)
+
+        } else {
+            return items
+        }
+    }
+    onUpdateFilter(value){
+        this.setState({
+            filter: value
+        })
+    }
 
 
     render () {
-        const {data,searchValue} = this.state;
+        const {data,searchValue , filter} = this.state;
 
         const likes = data.filter(item => item.like).length;
 
-        const searchPost = this.searchPost(data, searchValue);
+        const searchPost = this.filterPost(this.searchPost(data,searchValue), filter);
         const allitems = searchPost.length;
         return (
             <div>
@@ -126,6 +141,8 @@ export default class App extends Component {
                 <div className="search-panel d-flex">
                     <SearchPanel 
                         onUpdateSearchPanel={this.onUpdateSearchPanel}
+                        filter={filter}
+                        onUpdateFilter={this.onUpdateFilter}
                     />
                 </div>
                 <PostList 
