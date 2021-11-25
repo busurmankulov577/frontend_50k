@@ -12,15 +12,16 @@ export default class App extends Component {
         super(props);
         this.state = {
             data: [
-                {label: "Статья номер 1", important: true, id: "asddddda"},
-                {label: "Статья номер 2", important: false,id: "asasda"},
-                {label: "Статья номер 3", important: false,id: "asdasda"},
-                {label: "Статья номер 4", important: false,id: "asdsa"},
-                {label: "Статья номер 3", important: false,id: "asdaaaaa"},
-                {label: "Статья номер 12", important: true,id: "asdaaasdasdaa"}
+                {label: "Статья номер 1", important: true, id:1 },
+                {label: "Статья номер 2", important: false,id:2},
+                {label: "Статья номер 3", important: false,id:3},
+
             ]
         }
         this.onDelete = this.onDelete.bind(this);
+        this.addItem = this.addItem.bind(this);
+
+        this.id = 4;
     }
     onDelete(id) {
         this.setState(({data}) => {
@@ -31,6 +32,24 @@ export default class App extends Component {
             const newData = [...before, ...after];
             return {
                 data: newData
+            }
+        })
+
+    }
+    addItem(text){
+        
+        const newItem = {
+            label: text,
+            important: false,
+            id:this.id++
+        }
+        console.log(this.id)
+
+        this.setState(({data}) => {
+            const newArr = [...data, newItem];
+
+            return {
+                data: newArr
             }
         })
 
@@ -46,7 +65,9 @@ export default class App extends Component {
                     posts={this.state.data}
                     onDelete={this.onDelete}
                 />
-                <PostAddForm/>
+                <PostAddForm 
+                    addItem={this.addItem}
+                />
             </div>
         )
     }

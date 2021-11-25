@@ -12,7 +12,7 @@ const SearchPanel = () => {
                         placeholder="Поиск записей"
                     />
                     <div class="btn-group">
-                        <Button color="info">Danger!</Button>
+               
                         <a href="#" class="btn btn-primary active" aria-current="page">Все</a>
                         <a href="#" class="btn btn-outline-success">Понравившиеся</a>
                     </div>
