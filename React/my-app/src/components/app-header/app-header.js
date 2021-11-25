@@ -29,14 +29,14 @@ const AppDiv = styled.div`
 
 // `;
 
-const AppHeader = () => {
+const AppHeader = ({allPost, likes}) => {
     return(
         <div className="container">
             <AppDiv>
 
                 <h1>Дамирбек Бусурманкулов</h1>
                 <span>
-                    <span> 3 </span>- Записи, из них 0 - понравилось
+                    <span> {allPost} </span>- записи, из них {likes} - понравилось
                 </span>            
             </AppDiv>
 

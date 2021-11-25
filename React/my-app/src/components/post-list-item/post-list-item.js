@@ -3,36 +3,12 @@ import './post-list-item.css';
 
 export default class PostListItem extends Component{
     
-    constructor(props){
-        super(props);
-        this.state = {
-            important: false,
-            like: false
-        }
 
-        this.addImportant = this.addImportant.bind(this);
-        this.addLike = this.addLike.bind(this);
-    }
-
-
-
-    addImportant (){    
-        this.setState(({important}) => ({
-            important: !important
-        }))
-
-    }
-    addLike (){    
-        this.setState(({like}) => ({
-            like: !like
-        }))
-
-    }
     render() {
 
 
-        const {label , onDelete} = this.props;
-        const {important, like} = this.state;
+        const {label , onDelete , onToggleImportant, onToggleLike, important, like} = this.props;
+
 
         let className = " app-list-item d-flex justify-content-between"
         if (important){
@@ -44,9 +20,9 @@ export default class PostListItem extends Component{
         return(
             <div className="container">
                 <li className={className}>
-                    <span className="app-list-item-label " onClick={this.addLike}>{label}{important}</span>
+                    <span className="app-list-item-label " onClick={onToggleLike}>{label}{important}</span>
                     <div className="d-flex justify-content-evenly align-items">
-                        <button className="btn-star btn-sm mx-3" onClick={this.addImportant}>
+                        <button className="btn-star btn-sm mx-3" onClick={onToggleImportant}>
                             <i class="fas fa-star"></i>
                         </button>
                         <button className="btn-trash btn-sm mx-3"  onClick={onDelete}>
