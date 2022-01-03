@@ -125,6 +125,7 @@ export default class App extends Component {
 
 
     render () {
+        
         const {data,searchValue , filter} = this.state;
 
         const likes = data.filter(item => item.like).length;
@@ -160,6 +161,48 @@ export default class App extends Component {
 
     
 }
+class getData {
+
+    constructor (){
+        this._urlBase = "https://jsonplaceholder.typicode.com";
+    }
+        async fetchData(url) {
+
+        const   res = await fetch(`${this._urlBase}${url}`)
+    
+        if(!res.ok){
+            throw new Error(`Link is broke ${url}, status ${res.status}`);
+        }
+
+        const json = await res.json();
+    
+
+        return json;
+      
+
+    }
+    
+    getAllpost(){
+        return this.fetchData('/posts');
+    }
+
+    getPostbyId(id){
+        return this.fetchData(`/posts/${id}`);
+    }
+}
+
+
+
+
+    const get = new getData();
+
+    get.getAllpost()
+        .then((res) => {
+        res.forEach(element => console.log(element.title)); 
+    })
+
+    get.getPostbyId(10)
+        .then((res) => console.log("Success" , res))
 
 
 // <PostStatusFilter />
