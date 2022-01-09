@@ -1,10 +1,14 @@
 //1 Function
 
-// Function Declaration
+//                                                  Function Declaration
+
+
 // function greet(name){
 //     console.log('hi - ', name);
 // }
-//Function Expression
+
+
+//                                                          Function Expression
 
 // const greet2 = function greet2 (name){
 //     console.log('hi - ', name);
@@ -15,7 +19,7 @@
 // greet2('Damir')
 // console.dir(greet)
 
-// // 2 Анонимные функции
+// //                                                       2 Анонимные функции
 // let counter = 0;
 // const interval = setInterval(function () {
 //     if (counter === 5){
@@ -26,7 +30,7 @@
 
 // }, 1000)
 
-// 3 Стрелочные функции 
+//                                                              3 Стрелочные функции 
 
 
 
@@ -44,7 +48,7 @@
 // const pow2 = num =>  num ** 2;
 // console.log(pow2(5))
 
-// 4 Параметры по умолчанию 
+//                                                                  4 Параметры по умолчанию 
 
 // const sum = (a = 40, b = a * 2) => a + b;
 // console.log(sum());
@@ -62,7 +66,7 @@ function sumAll (...all) {
 const res = sumAll(1,2,3,1,4,5);
 // console.log(res)
 
-// Замыкания 
+//                                                                                // Замыкания 
 function createMember (name) {
     return function (lastName){
         console.log(name + lastName);
