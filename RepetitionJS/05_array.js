@@ -95,14 +95,14 @@ const allBudjet =  people
 
 const guests = [
     
-    {name: 'Damir', budget: 4500, age: 21},
     {name: 'Kemal', budget: 3500, age: 20},
+    {name: 'Damir', budget: 4500, age: 21},
     {name: 'Elena', budget: 2900, age: 17},
     {name: 'Klaus', budget: 1000, age: 24},
     {name: 'Katrine', budget: 1000, age: 16}
-
+    
     
 ]
-// party 18+
 const whoCanComeIn  = guests.filter(point => point.age > 18 && point.budget > 3000)
+// party 18+
 console.log(whoCanComeIn);
